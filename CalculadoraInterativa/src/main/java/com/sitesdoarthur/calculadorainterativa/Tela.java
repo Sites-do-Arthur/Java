@@ -29,11 +29,14 @@ public class Tela extends javax.swing.JFrame {
 
         jDialog1 = new javax.swing.JDialog();
         jLabel1 = new javax.swing.JLabel();
-        clique = new javax.swing.JButton();
+        soma = new javax.swing.JButton();
         numero1 = new javax.swing.JTextField();
         numero2 = new javax.swing.JTextField();
         resultado = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        menos = new javax.swing.JButton();
+        multiplicacao = new javax.swing.JButton();
+        divisao = new javax.swing.JButton();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -51,16 +54,37 @@ public class Tela extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/calculadora/imagens/OIP.png"))); // NOI18N
         jLabel1.setText("Calculadora Interativa V 2A+");
 
-        clique.setText("=");
-        clique.addActionListener(new java.awt.event.ActionListener() {
+        soma.setText("+");
+        soma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cliqueActionPerformed(evt);
+                somaActionPerformed(evt);
             }
         });
 
         resultado.setText("0");
 
-        jLabel3.setText("+");
+        jLabel3.setText("=");
+
+        menos.setText("-");
+        menos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menosActionPerformed(evt);
+            }
+        });
+
+        multiplicacao.setText("x");
+        multiplicacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiplicacaoActionPerformed(evt);
+            }
+        });
+
+        divisao.setText(":");
+        divisao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                divisaoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -70,17 +94,25 @@ public class Tela extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addContainerGap(324, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(numero1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(soma)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(menos)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(multiplicacao)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(divisao)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(numero2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel3)
-                        .addGap(14, 14, 14)
-                        .addComponent(numero2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(clique, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(161, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(72, 72, 72))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,26 +120,60 @@ public class Tela extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(numero1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel3)
-                        .addComponent(numero2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(clique)
-                        .addComponent(resultado)))
-                .addContainerGap(50, Short.MAX_VALUE))
+                    .addComponent(soma)
+                    .addComponent(menos)
+                    .addComponent(numero2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(resultado)
+                    .addComponent(multiplicacao)
+                    .addComponent(divisao))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cliqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cliqueActionPerformed
+    private void somaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_somaActionPerformed
         // TODO add your handling code here:
+        //Declaração de variaveis
         int n1 = Integer.parseInt(numero1.getText());
         int n2 = Integer.parseInt(numero2.getText());
-        int soma = n1 + n2;
-        resultado.setText(Integer.toString(soma));
-    }//GEN-LAST:event_cliqueActionPerformed
+        int results = n1 + n2;
+        //Fim da declaração de variaveis
+        resultado.setText(Integer.toString(results));
+    }//GEN-LAST:event_somaActionPerformed
+
+    private void menosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menosActionPerformed
+        // TODO add your handling code here:
+        //Declaração de variaveis
+        int n1 = Integer.parseInt(numero1.getText());
+        int n2 = Integer.parseInt(numero2.getText());
+        int results = n1 - n2;
+        //Fim da declaração de variaveis
+        resultado.setText(Integer.toString(results));
+    }//GEN-LAST:event_menosActionPerformed
+
+    private void multiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicacaoActionPerformed
+        // TODO add your handling code here:
+        //Declaração de variaveis
+        int n1 = Integer.parseInt(numero1.getText());
+        int n2 = Integer.parseInt(numero2.getText());
+        int results = n1 * n2;
+        //Fim da declaração de variaveis
+        resultado.setText(Integer.toString(results));
+    }//GEN-LAST:event_multiplicacaoActionPerformed
+
+    private void divisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisaoActionPerformed
+        // TODO add your handling code here:
+        //Declaração de variaveis
+        int n1 = Integer.parseInt(numero1.getText());
+        int n2 = Integer.parseInt(numero2.getText());
+        int result = n1 / n2;
+        //Fim da declaração de variaveis
+        resultado.setText(Integer.toString(result));
+    }//GEN-LAST:event_divisaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,12 +209,15 @@ public class Tela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton clique;
+    private javax.swing.JButton divisao;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton menos;
+    private javax.swing.JButton multiplicacao;
     private javax.swing.JTextField numero1;
     private javax.swing.JTextField numero2;
     private javax.swing.JLabel resultado;
+    private javax.swing.JButton soma;
     // End of variables declaration//GEN-END:variables
 }
