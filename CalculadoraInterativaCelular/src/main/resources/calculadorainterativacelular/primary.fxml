@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" prefHeight="149.0" prefWidth="535.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculadorainterativacelular.PrimaryController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Label id="lblTexto" alignment="CENTER" style="-fx-background-color: #dddddddd; -fx-padding: 10px;" styleClass="label#lblTexto" stylesheets="@Estitilo.css" text="Calculadora Interativa" />
+      <TextField id="numero1" prefHeight="25.0" prefWidth="357.0" />
+      <Button mnemonicParsing="false" stylesheets="@Estitilo.css" text="+" />
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" text="-" />
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="29.0" text="x" />
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" text=":" />
+      <TextField id="numero2" />
+      <Label text="=" />
+      <Label prefHeight="17.0" prefWidth="116.0" text="0" />
+   </children>
+</VBox>
