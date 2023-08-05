@@ -21,3 +21,5 @@ rad.json
 #Test results file
 TestResults.xml
 /CalculadoraInterativa2A/target/
+/CalculadoraInterativaCelular/target/
+/SystemCP-g/target/
