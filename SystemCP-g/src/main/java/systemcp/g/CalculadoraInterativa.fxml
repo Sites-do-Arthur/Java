@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="systemcp.g.CalculadoraInterativaController">
+   <children>
+      <Label layoutX="208.0" layoutY="28.0" text="Calculadora Interativa para CP-GUI" />
+      <TextField fx:id="numero1" layoutX="14.0" layoutY="140.0" />
+      <Button fx:id="adicao" layoutX="163.0" layoutY="140.0" mnemonicParsing="false" text="+" />
+      <Button fx:id="subtracao" layoutX="196.0" layoutY="140.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="-" />
+      <Button fx:id="multiplicacao" layoutX="234.0" layoutY="140.0" mnemonicParsing="false" text="X" />
+      <Button fx:id="divisao" layoutX="265.0" layoutY="140.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text=":" />
+      <TextField fx:id="numero2" layoutX="290.0" layoutY="140.0" />
+      <Label layoutX="448.0" layoutY="144.0" text="=" />
+      <Label fx:id="resultado" layoutX="477.0" layoutY="144.0" prefHeight="17.0" prefWidth="104.0" text="0" />
+   </children>
+</AnchorPane>
