@@ -18,6 +18,8 @@ import javafx.scene.control.Label;
  * @author Win10
  */
 public class CalculadoraInterativaController implements Initializable {
+
+    static String[] java;
     
     @FXML
     private TextField numero1;
