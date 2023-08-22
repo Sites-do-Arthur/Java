@@ -21,9 +21,14 @@ public class ProgramaIdade {
         System.out.println("Iniciando CP-GUI");
         System.out.print("Em que ano você naceu: ");
         int an = teclado.nextInt();
-        System.out.print("Em que ano estamos");
+        System.out.print("Em que ano estamos? ");
         int a = teclado.nextInt();
         int idade = a - an;
-        
+        System.out.print("Sua idade é " + idade + ". E sua classificação é ");
+        if (idade>= 18){
+            System.out.println("Maior de idade");
+        } else {
+            System.out.println("Menor de idade");
+        }
     }
 }
