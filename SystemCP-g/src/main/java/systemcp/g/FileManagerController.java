@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import systemcp.g.sql.java.SqlArquivos;
 
 /**
  * FXML Controller class
@@ -32,17 +33,21 @@ public class FileManagerController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         
     }    
-   private void procurarActionPerform() {
-       String procurar = procure.getText();
+   private void procurar() {
+       String procurar = arquivo.getText();
+       String dado;
        String save = oarquivo.getText();
        boolean vini;
        boolean amanda;
-       String amandaDado = null;
-       String viniDado = null;
+       
         amanda = "Amanda".equals(procurar);
         vini = "Vinicius".equals(procurar);
        if(amanda) {
-           oarquivo.setText(amandaDado);
+            dado = SqlArquivos.sqlAlunos("Amanda");
+       } else {
+           if (vini) {
+               SqlArquivos.sqlAlunos("Vinicius");
+           }
        }
     } 
 }
