@@ -9,6 +9,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
@@ -19,6 +20,8 @@ public class ProgramManagerController implements Initializable {
 
     @FXML
     private RadioButton Calc;
+    private RadioButton File;
+    private Button Aplic;
     
     /**
      * Initializes the controller class.
