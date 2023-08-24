@@ -31,6 +31,12 @@ public class ProgramManagerController implements Initializable {
         if(Calc.isSelected()) {
             App.setRoot("CalculadoraInterativa.fxml");
         }
+        if(File.isSelected()) {
+            App.setRoot("FileManager.fxml");
+        }
+    }
+    private void sair() {
+        
     }
     
     /**
