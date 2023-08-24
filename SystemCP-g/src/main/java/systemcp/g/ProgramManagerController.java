@@ -6,7 +6,9 @@ package systemcp.g;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.RadioButton;
 
 /**
  * FXML Controller class
@@ -15,12 +17,18 @@ import javafx.fxml.Initializable;
  */
 public class ProgramManagerController implements Initializable {
 
+    @FXML
+    private RadioButton Calc;
+    
     /**
      * Initializes the controller class.
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
     }    
     
 }
