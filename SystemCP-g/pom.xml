@@ -11,6 +11,12 @@
             <version>13</version>
             <type>jar</type>
         </dependency>
+        <dependency>
+            <groupId>1</groupId>
+            <artifactId>ParOuImpar</artifactId>
+            <version>1B</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
