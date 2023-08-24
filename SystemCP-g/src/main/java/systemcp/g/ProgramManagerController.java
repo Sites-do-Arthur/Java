@@ -22,6 +22,7 @@ public class ProgramManagerController implements Initializable {
     private RadioButton Calc;
     private RadioButton File;
     private Button Aplic;
+    private Button Close;
     
     /**
      * Initializes the controller class.
