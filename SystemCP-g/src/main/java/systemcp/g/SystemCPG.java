@@ -7,8 +7,7 @@ package systemcp.g;
 
 import java.io.IOException;
 import java.util.Scanner;
-import systemcp.g.sql.java.App;
-import systemcp.g.sql.java.Flavio;
+import systemcp.g.sql.java.SqlArquivos;
 
 /**
  *
@@ -30,28 +29,7 @@ public class SystemCPG {
         comando = teclado.nextLine();
         seArquivos = ("Arquivos".equals(comando));
         seCalc = ("Calculadora".equals(comando));
-        if(seArquivos){
-            App.setRoot("FileManager.fxml");
-        }
-        if(seCalc) {
-            App.setRoot("CalculadoraInterativa.fxml");
-        }
-        System.out.print("root> ");
-        comando = teclado.nextLine();
-        flavio = ("flavio --console".equals(comando));
-        if(flavio) {
-            byte menu;
-            System.out.println("Iniciando Flávio");
-            System.out.println("Digite [1] para calcular raiz quadrada");
-            System.out.println("Digite [2] para calcular elevação");
-            System.out.println("Digite [3] para calcular porsentagem");
-            System.out.println("Digite [4] para sair");
-            menu = teclado.nextByte();
-            if (menu == 1) {
-                float resultado = Flavio.calcularRaizQuadrada();
-                System.out.println("A raiz quadrada do numero é " + resultado);
-            }
-        }
+        SqlArquivos.sqlFuncoes(comando, seArquivos, seCalc);
     }
 }
 

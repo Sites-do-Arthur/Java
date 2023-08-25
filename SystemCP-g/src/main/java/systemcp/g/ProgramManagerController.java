@@ -35,8 +35,8 @@ public class ProgramManagerController implements Initializable {
             App.setRoot("FileManager.fxml");
         }
     }
-    private void sair() {
-        
+    private void sair() throws IOException {
+        App.setRoot("SystemCPG.java");
     }
     
     /**
