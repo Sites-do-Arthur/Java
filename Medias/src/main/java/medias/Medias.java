@@ -25,7 +25,7 @@ public class Medias {
         n2 = teclado.nextFloat();
         media = (n1 + n2)/2;
         System.out.println("Sua media foi " + media);
-        if(media > 9) {9
+        if(media > 9) {
             System.out.println("Parabéns pela sua nota!!");
         }
     }

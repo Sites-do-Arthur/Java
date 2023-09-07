@@ -22,7 +22,6 @@ public class SystemCPG {
         comando = null;
         boolean seArquivos;
         boolean seCalc;
-        boolean flavio;
         //Fim da declaração de variaveis
         System.out.println("Iniciando CP-GUI SO");
         System.out.print("root> ");
