@@ -7,6 +7,8 @@ package systemcp.g;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
+import javafx.scene.control.RadioButton;
+import javafx.fxml.FXML;
 
 /**
  * FXML Controller class
@@ -15,6 +17,8 @@ import javafx.fxml.Initializable;
  */
 public class IntaladorController implements Initializable {
 
+    @FXML
+    
     /**
      * Initializes the controller class.
      * @param url
