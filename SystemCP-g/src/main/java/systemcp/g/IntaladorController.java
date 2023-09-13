@@ -8,6 +8,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.Button;
 import javafx.fxml.FXML;
 
 /**
@@ -19,6 +20,7 @@ public class IntaladorController implements Initializable {
 
     @FXML
     private RadioButton app1;
+    private Button ativar;
     
     @FXML
     
