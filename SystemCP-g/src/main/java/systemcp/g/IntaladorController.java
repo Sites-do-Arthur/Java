@@ -18,6 +18,9 @@ import javafx.fxml.FXML;
 public class IntaladorController implements Initializable {
 
     @FXML
+    private RadioButton app1;
+    
+    @FXML
     
     /**
      * Initializes the controller class.
