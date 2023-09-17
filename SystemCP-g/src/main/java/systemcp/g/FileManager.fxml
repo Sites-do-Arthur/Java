@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="systemcp.g.FileManagerController">
+    <stylesheets>
+        <URL value="@filemanager.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="arquivo" layoutX="223.0" layoutY="95.0" text="Digite aqui o arquivo" />
+      <Label layoutX="263.0" layoutY="38.0" text="File Manager" />
+      <TextArea fx:id="oarquivo" layoutX="14.0" layoutY="160.0" prefHeight="200.0" prefWidth="572.0" />
+      <Button fx:id="procure" layoutX="447.0" layoutY="95.0" mnemonicParsing="false" onAction="#procurar" text="Procurar" />
+   </children>
+</AnchorPane>
