@@ -20,9 +20,15 @@ public class IntaladorController implements Initializable {
 
     @FXML
     private RadioButton app1;
+    private RadioButton app2;
     private Button ativar;
     
     @FXML
+    private void instalar() {
+        if(app1.isSelected()) {
+            
+        }
+    }
     
     /**
      * Initializes the controller class.
