@@ -28,6 +28,9 @@ public class IntaladorController implements Initializable {
         if(app1.isSelected()) {
             
         }
+        if(app2.isSelected()) {
+            
+        }
     }
     
     /**
@@ -38,6 +41,10 @@ public class IntaladorController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        boolean non = false;
+        if(non == true){
+        
+    }
     }    
     
 }
