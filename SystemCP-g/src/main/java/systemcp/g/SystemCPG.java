@@ -29,10 +29,17 @@ public class SystemCPG {
         seArquivos = ("Arquivos".equals(comando));
         seCalc = ("Calculadora".equals(comando));
         SqlArquivos.sqlFuncoes(comando, seArquivos, seCalc);
+        if(seCalc) {
+            System.out.print("Informe o primeiro número: ");
+            int n1 = teclado.nextInt();
+            System.out.print("Informe o último número: ");
+            int n2 = teclado.nextInt();
+            calc(n1, n2, 's');
+        }
     }
 
-    public static float calc(int n1, int n2, char op) {
-	if(op == "s") {
+    public static void calc(int n1, int n2, char op) {
+	if(op == 's') {
 		int r = n1 + n2;
         System.out.print("A soma é de " + r);
 	}
