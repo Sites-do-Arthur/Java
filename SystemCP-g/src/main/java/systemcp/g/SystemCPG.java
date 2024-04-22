@@ -31,9 +31,10 @@ public class SystemCPG {
         SqlArquivos.sqlFuncoes(comando, seArquivos, seCalc);
     }
 
-    public static void calc(int n1, int n2, char op) {
-	if(op == "") {
-		
+    public static float calc(int n1, int n2, char op) {
+	if(op == "s") {
+		int r = n1 + n2;
+        System.out.print("A soma é de " + r);
 	}
     }
 }
