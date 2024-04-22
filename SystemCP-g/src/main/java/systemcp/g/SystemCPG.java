@@ -30,5 +30,11 @@ public class SystemCPG {
         seCalc = ("Calculadora".equals(comando));
         SqlArquivos.sqlFuncoes(comando, seArquivos, seCalc);
     }
+
+    public static void calc(int n1, int n2, char op) {
+	if(op == "") {
+		
+	}
+    }
 }
 
