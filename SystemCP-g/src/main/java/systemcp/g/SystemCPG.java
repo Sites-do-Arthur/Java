@@ -7,7 +7,6 @@ package systemcp.g;
 
 import java.io.IOException;
 import java.util.Scanner;
-import systemcp.g.sql.java.SqlArquivos;
 
 /**
  *
@@ -30,23 +29,27 @@ public class SystemCPG {
             comando = teclado.nextLine();
             seArquivos = ("Arquivos".equals(comando));
             seCalc = ("Calculadora".equals(comando));
-            SqlArquivos.sqlFuncoes(comando, seArquivos, seCalc);
             if(seCalc) {
                 System.out.print("Informe o primeiro número: ");
                 int n1 = teclado.nextInt();
                 System.out.print("Informe o último número: ");
                 int n2 = teclado.nextInt();
-                calc(n1, n2, 's');
+                System.out.println("Digit 's' soma, 'u' subtração, 'm' multiplicação e 'd' divisão:");
+                String op = teclado.nextLine();
+                calc(n1, n2, op);
+            }
+            if("exit".equals(comando)) {
+                break;
             }
        } while(repet == true);
     }
     
 
-    public static void calc(int n1, int n2, char op) {
-	if(op == 's') {
-		int r = n1 + n2;
-        System.out.print("A soma é de " + r);
-	}
+    public static void calc(int n1, int n2, String op) {
+	if("s".equals(op)) {
+            int r = n1 + n2;
+            System.out.print("A soma é de " + r);
+        }
     }
 }
 
