@@ -20,23 +20,27 @@ public class SystemCPG {
         Scanner teclado = new Scanner(System.in);
         String comando;
         comando = null;
+        boolean repet = true;
         boolean seArquivos;
         boolean seCalc;
         //Fim da declaração de variaveis
-        System.out.println("Iniciando CP-GUI SO");
-        System.out.print("root> ");
-        comando = teclado.nextLine();
-        seArquivos = ("Arquivos".equals(comando));
-        seCalc = ("Calculadora".equals(comando));
-        SqlArquivos.sqlFuncoes(comando, seArquivos, seCalc);
-        if(seCalc) {
-            System.out.print("Informe o primeiro número: ");
-            int n1 = teclado.nextInt();
-            System.out.print("Informe o último número: ");
-            int n2 = teclado.nextInt();
-            calc(n1, n2, 's');
-        }
+        do {
+            System.out.println("Iniciando CP-GUI SO");
+            System.out.print("root> ");
+            comando = teclado.nextLine();
+            seArquivos = ("Arquivos".equals(comando));
+            seCalc = ("Calculadora".equals(comando));
+            SqlArquivos.sqlFuncoes(comando, seArquivos, seCalc);
+            if(seCalc) {
+                System.out.print("Informe o primeiro número: ");
+                int n1 = teclado.nextInt();
+                System.out.print("Informe o último número: ");
+                int n2 = teclado.nextInt();
+                calc(n1, n2, 's');
+            }
+       } while(repet == true);
     }
+    
 
     public static void calc(int n1, int n2, char op) {
 	if(op == 's') {
